@@ -1,6 +1,11 @@
 package org.example.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Customer {
+    @Id
     private int id;
     private String name;
     private String address;
@@ -35,12 +40,6 @@ public class Customer {
     }
 
     public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Customer(int id, String name, String address) {
-        this.id = id;
-        this.name = name;
         this.address = address;
     }
 }
