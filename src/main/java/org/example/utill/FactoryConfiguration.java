@@ -9,6 +9,7 @@ public class FactoryConfiguration {
     private SessionFactory sessionFactory;
     private FactoryConfiguration(){
         Configuration configuration = new Configuration();
+        sessionFactory = configuration.buildSessionFactory();
     }
 
     public static FactoryConfiguration getInstance(){
