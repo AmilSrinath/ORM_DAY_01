@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Customer {
     @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String address;

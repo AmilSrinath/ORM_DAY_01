@@ -9,12 +9,13 @@ public class Main {
     public static void main(String[] args) {
         Customer customer = new Customer();
         customer.setId(1);
-        customer.setName("Amil Srinath");
-        customer.setAddress("Panadura");
+        customer.setName("Ranil");
+        customer.setAddress("Bambalapitiya");
 
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         session.persist(customer);//Inset
+//        session.update(customer);//Update
         transaction.commit();
         session.close();
     }
